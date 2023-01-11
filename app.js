@@ -23,7 +23,6 @@ app.use('/',Index);
 app.use('/Get_Token', GetTokenRouter);
 app.use('/Music_Info', GetMusicInfoRouter);
 
-
 app.use(function(req, res, next) {
   next(createError(404));
 });
