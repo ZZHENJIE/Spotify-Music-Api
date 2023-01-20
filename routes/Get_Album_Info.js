@@ -13,7 +13,7 @@ router.get('/',async function(req, res, next) {
     }
 
     if(id != null && Token != null){
-        fetch('https://api.spotify.com/v1/tracks/' + id + '?market=CH',{
+        fetch('https://api.spotify.com/v1/albums/' + id + '?market=CH',{
             headers: {
                 'Authorization':'Bearer ' + Token
             }
@@ -22,7 +22,7 @@ router.get('/',async function(req, res, next) {
         .then(data => res.send(data));
     }else{
         if(id == null){
-            res.send(JSON.stringify({"error":"未输入歌曲ID"}));
+            res.send(JSON.stringify({"error":"未输入Id"}));
         }
         else{
             res.send(JSON.stringify({"error":"获取Token失败"}));
