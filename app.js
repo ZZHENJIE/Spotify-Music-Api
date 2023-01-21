@@ -11,6 +11,7 @@ var GetSearchRouter = require('./routes/Search');
 var GetMusicUrlRouter = require('./routes/Get_Music_Url');
 var GetAlbumInfoRouter = require('./routes/Get_Album_Info');
 var GetAlbumMusicRouter = require('./routes/Get_Album_Music');
+var UserData = require('./routes/User_Data');
 
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.html', require('ejs').__express);
@@ -28,6 +29,7 @@ app.use('/Search', GetSearchRouter);
 app.use('/Music_Url', GetMusicUrlRouter);
 app.use('/Album_Info', GetAlbumInfoRouter);
 app.use('/Album_Music', GetAlbumMusicRouter);
+app.use('/User', UserData);
 
 app.use('/',express.Router().get('/', function(req, res, next) {
   res.render('index');
