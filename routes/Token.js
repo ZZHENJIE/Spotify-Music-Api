@@ -4,8 +4,8 @@ const { post } = require("request");
 把这的 client_id client_secret 设置为Spotify developer 中的 client_id client_secret
 */
 
-var client_id = '8e4613e37b0246f79bd0a12532c44053';
-var client_secret = '1489aa466a714a29a6a36fc73a6147a1';
+var client_id = null;
+var client_secret = null;
 
 exports.Get_Token = () =>{
 
