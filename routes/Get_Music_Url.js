@@ -27,7 +27,7 @@ router.get('/',async function(req, res, next) {
         else{
             res.send(JSON.stringify({"error":"获取Token失败"}));
         }
-    }   
+    }
 });
 
 module.exports = router;

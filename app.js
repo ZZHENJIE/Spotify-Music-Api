@@ -12,6 +12,7 @@ var GetMusicUrlRouter = require('./routes/Get_Music_Url');
 var GetAlbumInfoRouter = require('./routes/Get_Album_Info');
 var GetAlbumMusicRouter = require('./routes/Get_Album_Music');
 var UserData = require('./routes/User_Data');
+var KuGou = require('./routes/Ku_Gou');
 
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.html', require('ejs').__express);
@@ -30,6 +31,7 @@ app.use('/Music_Url', GetMusicUrlRouter);
 app.use('/Album_Info', GetAlbumInfoRouter);
 app.use('/Album_Music', GetAlbumMusicRouter);
 app.use('/User', UserData);
+app.use('/KuGou', KuGou);
 
 app.use('/',express.Router().get('/', function(req, res, next) {
   res.render('index');
